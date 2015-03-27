@@ -10,14 +10,14 @@ import javax.swing.JPanel;
 
 import DomaineVoiture.Voiture;
 
-public class CommandeVoiture extends JPanel implements ActionListener{
+public class IHMParametreVoiture extends JPanel implements ActionListener{
 	
 	private JButton boutonAccelerer;
 	private JButton boutonInverserDirection;
 	private Voiture maVoiture;
 	
 	
-	public CommandeVoiture (JFrame fenetre, Voiture maVoiture) {
+	public IHMParametreVoiture(JFrame fenetre, Voiture maVoiture) {
 		
 		super();
 		this.setLayout(new FlowLayout());

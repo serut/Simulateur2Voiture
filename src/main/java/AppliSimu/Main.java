@@ -7,14 +7,14 @@ import javax.swing.Timer;
 
 import DomaineVoiture.Voiture;
 
-public class ProtoSimu {
+public class Main {
 
 	public static final int dureeUneSecondeEnMilliSecondes = 1000;
 
 	public static void main(String[] args) {
 
 		final Voiture maVoiture = new Voiture (100, 0, 10);
-		IHMVoiture monTriangle = new IHMVoiture(maVoiture);
+		IHM monTriangle = new IHM(maVoiture);
 		
 		Timer timerAvancer = new Timer(dureeUneSecondeEnMilliSecondes, new ActionListener() {
 			
