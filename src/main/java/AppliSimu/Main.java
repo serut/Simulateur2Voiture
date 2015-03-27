@@ -2,6 +2,8 @@ package AppliSimu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.Timer;
 
@@ -13,8 +15,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		final Voiture maVoiture = new Voiture (100, 0, 10);
-		IHM monTriangle = new IHM(maVoiture);
+		final Voiture maVoiture = new Voiture (100, 300, 10);
+        List<Route> liste = new ArrayList<Route>();
+        liste.add(new Route(0, maVoiture.getY(), 100, 10000));
+		IHM monTriangle = new IHM(maVoiture, liste);
 		
 		Timer timerAvancer = new Timer(dureeUneSecondeEnMilliSecondes, new ActionListener() {
 			
