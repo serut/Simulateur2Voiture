@@ -75,7 +75,49 @@ public class TestVoiture {
 		maVoiture.inverserDirection();
 		maVoiture.miseAJourPosition();
 		assertEquals(0, maVoiture.getX());
-		
 	}
+
+
+    @Test
+    public void testTournerGauche() {
+
+
+        Voiture maVoiture2 = new Voiture (100, 100, 10);
+        maVoiture2.setVitesse(1000);
+        maVoiture2.directionGauche();
+        maVoiture2.miseAJourPosition();
+        assertEquals(270, maVoiture2.getDirection());
+        maVoiture2.directionGauche();
+        maVoiture2.miseAJourPosition();
+        assertEquals(180, maVoiture2.getDirection());
+        assertEquals(0, maVoiture2.getY());
+
+    }
+
+    @Test
+    public void testTournerDroite() {
+
+
+        Voiture maVoiture2 = new Voiture (100, 100, 10);
+        maVoiture2.setVitesse(1000);
+        maVoiture2.directionDroite();
+        maVoiture2.miseAJourPosition();
+        assertEquals(90, maVoiture2.getDirection());
+        maVoiture2.directionDroite();
+        maVoiture2.miseAJourPosition();
+        assertEquals(180, maVoiture2.getDirection());
+
+    }
+
+    @Test
+    public void testArreter() {
+        Voiture maVoiture2 = new Voiture (100, 100, 10);
+        maVoiture2.setVitesse(1000);
+        maVoiture2.toggleStop();
+        maVoiture2.miseAJourPosition();
+        assertEquals(100, maVoiture2.getX());
+        assertEquals(100, maVoiture2.getY());
+
+    }
 	
 }

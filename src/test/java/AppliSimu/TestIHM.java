@@ -21,7 +21,7 @@ public class TestIHM {
 		Voiture car = new Voiture(100, 0, 10);
 		IHM monIHM = new IHM(car, new ArrayList<Route>());
         monIHM.setVisible(false);
-        int xPixels = monIHM.calculerPositionPixels(110);
+        int xPixels = monIHM.getCircuit().calculerPositionPixels(110);
 		
 		assertEquals(55, xPixels);
 	}
@@ -33,7 +33,7 @@ public class TestIHM {
         routes.add(new Route(400, 400, 10, 500));
         IHM monIHM = new IHM(car, routes);
 
-        int xPixels = monIHM.calculerPositionPixels(110);
+        int xPixels = monIHM.getCircuit().calculerPositionPixels(110);
         monIHM.setVisible(false);
 
     }
